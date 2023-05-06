@@ -13,7 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => DiscoverProvider())
+        /* El comportamiento natural de los ChangeNotifierProvider() es que hasta que no sea necesario no crea
+           la instancia, osea es como un LazyLoad, para cambiar esto usamo el atributo lazy: false  */
+        ChangeNotifierProvider(
+          lazy: false,
+        /* Los puntos es un operador de cascada que nos dice despues de inicializar DiscoverProvider()
+           manda a llamar la funcion loadNextPage(), vuelve a apuntar a nuestro objecto pricipal es como
+           escribir DiscoverProvider(), DiscoverProvider().loadNextPage() */
+          create: (_) => DiscoverProvider()..loadNextPage()
+        )
       ],
       child: MaterialApp(
         title: 'Material App',
