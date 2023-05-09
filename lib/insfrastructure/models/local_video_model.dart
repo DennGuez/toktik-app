@@ -1,4 +1,3 @@
-import 'dart:collection';
 import 'package:toktik/domain/entities/video_post.dart';
 
 class LocalVideoModel {
