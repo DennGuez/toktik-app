@@ -13,9 +13,10 @@ class LocalVideoModel {
     this.views = 0
     });
 
-// Con esto vamos a crear a partir de la data, instancias de LocalVideoModel
+/* Con esto vamos a crear a partir de la data, instancias de LocalVideoModel */
   factory LocalVideoModel.fromJson(Map<String, dynamic> json) => LocalVideoModel(
     // name: json["name"] ?? 'No video name',
+/* Puede ser que estas propiedades no vengan, (name, videoUrl, etc. por eso le ponemos algo por defecto */
     name: json["name"] ?? 'No name',
     videourl: json["videoUrl"],
     likes: json["likes"] ?? 0,
