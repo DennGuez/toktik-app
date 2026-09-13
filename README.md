@@ -1,16 +1,58 @@
-# toktik
+# TokTik
 
-A new Flutter project.
+Clon básico de **TikTok** desarrollado en **Flutter**. Reproduce un feed vertical de videos con reproducción automática, gestos de play/pausa y una interfaz inspirada en la app original. El nombre es "TikTok" al revés 😄.
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Feed vertical de videos con scroll
+- Reproducción automática y play/pausa al tocar
+- Animaciones de interfaz (likes, transiciones)
+- Videos locales cargados desde los assets
 
-A few resources to get you started if this is your first Flutter project:
+## Tecnologías
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** (SDK Dart >= 2.19.6)
+- **video_player** — reproducción de videos
+- **provider** — gestión de estado
+- **animate_do** — animaciones
+- **intl** — formateo de números y fechas
+- Arquitectura limpia (datasources + repositories)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Requisitos
+
+- Flutter SDK instalado
+
+## Puesta en marcha
+
+1. Clonar el proyecto
+
+```bash
+git clone https://github.com/DennGuez/toktik-app.git
+cd toktik-app
+```
+
+2. Instalar dependencias
+
+```bash
+flutter pub get
+```
+
+3. Ejecutar la aplicación
+
+```bash
+flutter run
+```
+
+## Build de producción
+
+```bash
+# Android
+flutter build apk
+
+# iOS
+flutter build ios
+```
+
+## Licencia
+
+Proyecto de práctica / uso educativo.
